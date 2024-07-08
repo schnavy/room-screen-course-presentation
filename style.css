@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "G2 TGR";
+  src: url("fonts/G2TGR-Regular.woff2") format("woff2"),
+    url("fonts/G2TGR-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "G2-TGR";
+  src: url("fonts/G2-TGR-RegularItalic.woff2") format("woff2"),
+    url("fonts/G2-TGR-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  perspective: 2000px;
+  font-family: "G2 TGR";
+}
+:root {
+  --box-width: 100vw;
+  --box-height: 100vh;
+}
+
+.room {
+  position: relative;
+  width: var(--box-width);
+  height: var(--box-height);
+  transform-style: preserve-3d;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%) rotateX(0deg) rotateY(0deg);
+}
+
+.wall {
+  position: absolute;
+  width: var(--box-width);
+  height: var(--box-height);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+
+  pointer-events: none;
+}
+
+.front {
+  display: none;
+}
+
+.back {
+  transform: translateZ(calc(-1 * var(--box-width)));
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  pointer-events: all;
+  outline: 2px solid black;
+  outline-offset: -2px;
+}
+
+.left {
+  transform: rotateY(-90deg) translateX(calc(-1 * var(--box-width)));
+  transform-origin: left center;
+}
+.left.gradient {
+  background: linear-gradient(90deg, white, black);
+}
+
+.right {
+  transform: rotateY(90deg) translateX(calc(var(--box-width)));
+  transform-origin: right center;
+}
+.right.gradient {
+  background: linear-gradient(90deg, black, white);
+}
+
+.top {
+  height: var(--box-width);
+  transform: rotateX(-270deg) translateY(calc(-1 * var(--box-width)));
+  transform-origin: top center;
+}
+
+.top.gradient {
+  background: linear-gradient(0deg, black, white);
+}
+.bottom {
+  height: var(--box-width);
+  width: var(--box-width);
+  bottom: 0;
+  transform: rotateX(270deg) translateY(calc(1 * var(--box-width)));
+  transform-origin: bottom center;
+}
+
+.bottom.gradient {
+  background: linear-gradient(0deg, white, black);
+}
+
+.wall.back {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+
+  width: 100%;
+}
+.header > div {
+  padding: 50px;
+  cursor: pointer;
+}
+
+.course-title {
+  outline: 2px solid black;
+  outline-offset: -1px;
+  flex-grow: 1;
+}
+.back-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  outline: 2px solid black;
+  outline-offset: -1px;
+}
+
+.header > div:hover {
+  background-color: black;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-orientation: mixed;
+  outline: 2px solid black;
+  outline-offset: -1px;
+  flex-grow: 1;
+  padding: 50px 20px;
+  cursor: pointer;
+}
+
+.col:hover {
+  background-color: black;
+  color: white;
+}
+
+.content-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.content-detail .col {
+  flex-grow: 0;
+  width: 150px;
+}
+.content-detail .details {
+  flex-grow: 1;
+  padding: 50px;
+}
+
+.content-detail .link {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.content-detail .title {
+  margin-bottom: 2rem;
+}
+
+.content-detail .title-name {
+  display: inline-block;
+  font-size: 2rem;
+  transform: translateY(-50%);
+}
+
+.hide {
+    display: none !important;
+  }
