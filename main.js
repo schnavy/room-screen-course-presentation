@@ -14,14 +14,14 @@ const jsonData = [
     description:
       'As part of the annual exhibition the Information Design class invites to the new format ROUND TABLE – Conversations. Different project partners will come together to present their work and discuss the role of communication design in a socio-political context with the students. To promote the event, „Bierdeckel" (beer mats) were printed and distributed around campus. The website works as the digital translation of this idea.',
     path: "marie-teigler/index.html",
-    img: "marie-teigler.jpg",
+    img: "marie-teigler.jpeg",
   },
   {
     name: "Gue Hyun Lee",
     title: "IS IT A MOUSE IN A MOUTH OR A MOUTH IN A MOUSE?",
     description: "",
     path: "https://guehlee.github.io/Deep/",
-    img: "gue.png",
+    img: "gue.jpeg",
   },
   {
     name: "Elias Emtanes",
@@ -29,21 +29,21 @@ const jsonData = [
     description:
       "Die Website zeigt ein Portfolio mit verschiedenen Plakaten, die ich über den Verlauf der letzten Jahre gestaltet habe. Bei der Navigation steht ein überaus freundlicher und kompetenter Assistent zur Verfügung",
     path: "elias-emtanes/index.html",
-    img: "elias.jpg",
+    img: "elias.jpeg",
   },
   {
     name: "Simona Tanase",
     title: "Fish Party",
     description: "",
     path: "simona-tanase/index.html",
-    img: "simona-tanase.jpg",
+    img: "simona-tanase.jpeg",
   },
   {
     name: "Janek Stanisławski",
     title: "What are you waiting for?",
     description: "",
     path: "janek-stanislawski/index.html",
-    img: "janek.jpg",
+    img: "janek.jpeg",
   },
   {
     name: "Sehee Park",
@@ -51,21 +51,21 @@ const jsonData = [
     description:
       "Go through the story by resizing your screen according to the text. <br/> Click and drag Jack and Rose and move them around! <br/> Draw on the screen to read the credits.",
     path: "sehee-park/index.html",
-    img: "sehee.jpg",
+    img: "sehee.jpeg",
   },
   {
     name: "Eva Dietrich",
     title: "tischtennis.fun",
     description: "Description for project 8",
     path: "eva-dietrich/index.html",
-    img: "eva.jpg",
+    img: "eva.jpeg",
   },
   {
     name: "Gregor Simon",
-    title: "DUQO Webside Dummy",
+    title: "DUQO Website Dummy",
     description: "",
     path: "gregor-simon/index.html",
-    img: "gregor.jpg",
+    img: "gregor.jpeg",
   },
 ];
 
