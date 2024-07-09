@@ -13,84 +13,65 @@ const jsonData = [
     title: "ROUND TABLE – Conversations",
     description:
       'As part of the annual exhibition the Information Design class invites to the new format ROUND TABLE – Conversations. Different project partners will come together to present their work and discuss the role of communication design in a socio-political context with the students. To promote the event, „Bierdeckel" (beer mats) were printed and distributed around campus. The website works as the digital translation of this idea.',
-    path: "marie-teigler",
+    path: "marie-teigler/index.html",
     img: "marie-teigler.jpg",
   },
   {
     name: "Gue Hyun Lee",
-    title: "Project Title 2",
-    description: "Description for project 2",
-    path: "gue",
+    title: "IS IT A MOUSE IN A MOUTH OR A MOUTH IN A MOUSE?",
+    description: "",
+    path: "https://guehlee.github.io/Deep/",
     img: "gue.png",
   },
   {
     name: "Elias Emtanes",
-    title: "Project Title 3",
-    description: "Description for project 3",
-    path: "elias-emtanes",
+    title: "Jugendliche brauchen Rente, keine Arbeitsplätze",
+    description:
+      "Die Website zeigt ein Portfolio mit verschiedenen Plakaten, die ich über den Verlauf der letzten Jahre gestaltet habe. Bei der Navigation steht ein überaus freundlicher und kompetenter Assistent zur Verfügung",
+    path: "elias-emtanes/index.html",
     img: "elias.jpg",
   },
   {
     name: "Simona Tanase",
     title: "Fish Party",
     description: "",
-    path: "simona-tanase",
+    path: "simona-tanase/index.html",
     img: "simona-tanase.jpg",
   },
   {
-    name: "Jan Stanisbawski",
-    title: "Project Title 5",
-    description: "Description for project 5",
-    path: "http://example.com/project5",
-    img: "test.jpg",
-  },
-  {
-    name: "Marie Lu Teigler",
-    title: "Project Title 6",
-    description: "Description for project 6",
-    path: "http://example.com/project6",
-    img: "test3.jpg",
+    name: "Janek Stanisławski",
+    title: "What are you waiting for?",
+    description: "",
+    path: "janek-stanislawski/index.html",
+    img: "janek.jpg",
   },
   {
     name: "Sehee Park",
-    title: "Project Title 7",
-    description: "Description for project 7",
-    path: "http://example.com/project7",
-    img: "test.jpg",
+    title: "Titanic Lovestory",
+    description:
+      "Go through the story by resizing your screen according to the text. <br/> Click and drag Jack and Rose and move them around! <br/> Draw on the screen to read the credits.",
+    path: "sehee-park/index.html",
+    img: "sehee.jpg",
   },
   {
-    name: "Tanase Ioana-Simona",
-    title: "Project Title 8",
+    name: "Eva Dietrich",
+    title: "tischtennis.fun",
     description: "Description for project 8",
-    path: "http://example.com/project8",
-    img: "test2.jpg",
+    path: "eva-dietrich/index.html",
+    img: "eva.jpg",
   },
   {
-    name: "Dietrich Eva",
-    title: "Project Title 9",
-    description: "Description for project 9",
-    path: "http://example.com/project9",
-    img: "test.jpg",
-  },
-  {
-    name: "Hannah Krüger",
-    title: "Project Title 10",
-    description: "Description for project 10",
-    path: "http://example.com/project10",
-    img: "test2.jpg",
-  },
-  {
-    name: "Schmitt Anna-Lena",
-    title: "Project Title 11",
-    description: "Description for project 11",
-    path: "http://example.com/project11",
-    img: "test3.jpg",
+    name: "Gregor Simon",
+    title: "DUQO Webside Dummy",
+    description: "",
+    path: "gregor-simon/index.html",
+    img: "gregor.jpg",
   },
 ];
 
 // Course description data
 const courseDescription =
-  "A website can lie in bed on a mobile screen at night, serve as a display board at an crowded airport terminal, make executives sweat on the projector wall in the meeting room, or be part of installations or performative acts as an artistic medium. Screens and their contents always live in relation to the space/room in which they appear. <br/><br/> An introductory web coding course by David Wahrenburg, Summer Semester 2024";
+  "A website can lie in bed on a mobile screen at night, serve as a display board at an crowded airport terminal, make executives sweat on the projector wall in the meeting room, or be part of installations or performative acts as an artistic medium. Screens and their contents always live in relation to the space/room in which they appear. <br/><br/> An introductory web coding course by David Wahrenburg, Summer Semester 2024<br/><br/>This collective Website was designed by Gue Hyun Lee";
 
 // Function to set wall images
 function setWallImages(image) {
@@ -143,9 +124,9 @@ function openProject(index) {
   detailWrapper.querySelector(".title-title").textContent =
     jsonData[index].title;
   detailWrapper.querySelector(".title-name").textContent = jsonData[index].name;
-  detailWrapper.querySelector(".desc").textContent =
-    jsonData[index].description;
-  detailWrapper.querySelector(".link a").href = jsonData[index].path;
+  detailWrapper.querySelector(".desc").innerHTML = jsonData[index].description;
+  detailWrapper.querySelector(".link a").href =
+    "projects/" + jsonData[index].path;
   setWallImages(jsonData[index].img); // Ensure the correct image is shown when switching to detail view
 }
 
