@@ -36,6 +36,7 @@ const jsonData = [
     title: "Fish Party",
     description: "",
     path: "simona-tanase/index.html",
+    path2: "simona-tanase-2/index.html",
     img: "simona-tanase.jpeg",
   },
   {
@@ -133,8 +134,17 @@ function openProject(index) {
     jsonData[index].title;
   detailWrapper.querySelector(".title-name").textContent = jsonData[index].name;
   detailWrapper.querySelector(".desc").innerHTML = jsonData[index].description;
-  detailWrapper.querySelector(".link a").href =
+  detailWrapper.querySelector(".link .open-project").href =
     "projects/" + jsonData[index].path;
+  if (jsonData[index].path2) {
+    detailWrapper.querySelector(".link .open-project-secondary").style.display =
+      "inline-block";
+    detailWrapper.querySelector(".link .open-project-secondary").href =
+      "projects/" + jsonData[index].path2;
+  } else {
+    detailWrapper.querySelector(".link .open-project-secondary").style.display =
+      "none";
+  }
   setWallImages(jsonData[index].img); // Ensure the correct image is shown when switching to detail view
 }
 

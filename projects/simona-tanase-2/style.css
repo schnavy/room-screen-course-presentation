@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.fish {
+    position: absolute;
+}
+
+.fish img {
+    width: 200px; /* Increased the size of the sharks and stingray */
+    height: auto;
+}
+
+.large img {
+    width: 300px;  /* Adjust the size to make shark2 larger */
+    height: auto;
+}
+
+#start-dance {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 2em;
+    z-index: 1;
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f);
+    background-size: 300%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#start-dance:hover {
+    background-position: right center;
+}
+
+#party-text {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    animation: color-change 1s infinite alternate;
+    display: none;
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: green; }
+    100% { color: blue; }
+}

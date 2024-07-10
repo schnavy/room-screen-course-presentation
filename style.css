@@ -205,7 +205,11 @@ a {
 .content-detail .link {
   position: absolute;
   bottom: 70px;
+}
 
+.open-project-secondary {
+  margin-left: 30px;
+  display: none;
 }
 
 .content-detail .title {

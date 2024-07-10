@@ -1,0 +1,231 @@
+/* include your fonts */
+@font-face {
+  font-family: "Clouds";
+  src: url("../assets/fonts/APL385.woff2") format("woff2"),
+    url("../assets/fonts/APL385.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "apfel-grotezk";
+  src: url("../assets/fonts/ApfelGrotezk-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+
+/* keep this to get rid of the default styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* your own styling */
+
+body{
+  background-color: blue;
+  font-family: "apfel-grotezk";
+  border: 14px solid rgb(255, 255, 255);
+  background-size: cover;
+  height: 100dvh;
+/* cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" style="font-size: 20px;"><text y="15">🏓</text></svg>'), auto;
+ */
+/*  cursor: url(../assets/schlaegerschwarz.png) 128 128, auto; */
+ cursor: none; /* Standard-Cursor ausblenden */
+ 
+
+}
+
+/* remove the closing curly brace */
+.navigation {
+  margin: 10px;
+  margin-top: 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  pointer-events: hidden;
+  gap: 20px;
+} 
+
+/* Anchor link hover effects */
+/* Style the anchor links in the navigation bar with a custom font, no text decoration, red color, and a transition effect on hover. */
+.navigation a {
+  transition: all 200ms linear;
+  font-family: "apfel-grotezk";
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  pointer-events: hidden;
+}
+
+marquee {
+  font-family: "apfel-grotezk";
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+width: 100vw;}
+
+  .marqueesenkrecht
+  {
+    rotate: 90deg;
+    position: fixed;
+    width: 100vh;
+
+  
+  }
+
+ 
+  .circle {
+    width: 4vw;
+    height: 4vw;
+    background-color: orange;
+    box-shadow: 0 0 20px #ffffff, inset 10px 10px 10px #c9c8c87f;
+    border-radius: 100%;
+    margin-left: .5vw;
+    margin-top: .5vw;
+    position: absolute; /* Position hinzugefügt */
+    animation: pingpong 8s alternate infinite;
+
+}
+
+@keyframes pingpong {
+    0%   {top: 10vh; left: 0vw;}
+    10%  {top: 30vh; left: 100vw;}
+    30%  {top: 40vh; left: 0vw;}
+    50%  {top: 30vh; left: 99vw;} 
+    60%  {top: 80vh; left: 2vw;}
+    70%  {top: 60vh; left: 90vw;}
+    90%  {top: 50vh; left: 0vw;}
+    100% {top: 0vh; left: 99vw;}
+}
+
+@keyframes pingpongmobile {
+  0%   {top: 0vh; left: 10vw;}
+  10%  {top: 100vh; left: 30vw;}
+  30%  {top: 0vh; left: 40vw;}
+  50%  {top: 99vh; left: 3%;} 
+  60%  {top: 2vh; left: 2vw;}
+  70%  {top: 90vh; left: 60vw;}
+  90%  {top: 0vh; left: 50vw;}
+  100% {top: 99vh; left: 0vw;}
+}
+
+
+.form-image-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;              /* center the image!! */
+}
+
+
+.text-box {
+  color: white;
+  padding: 10px;
+  max-height: fit-content;
+  height: min-content;
+  width: 50%;
+  overflow: scroll;
+ /*  border: 3px dotted white; */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.text-boxes-wrapper {
+  margin-top: 0;
+  display: flex;
+  gap: 25px;
+}
+
+span {
+  font-style: bold;
+} 
+
+.container { 
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+
+/* body {
+  margin: 0;
+  height: 100vh;
+  cursor: none; /* Standard-Cursor ausblenden */
+/* }
+#custom-cursor {
+  position: absolute;
+  width: 32px; /* Größe des Cursors anpassen  
+  height: 32px;  Größe des Cursors anpassen 
+  pointer-events: none; /* Verhindert, dass der Cursor andere Elemente beeinflusst 
+  transform: translate(-50%, -50%);  Verschiebt das Bild, sodass die Mitte des Bildes der Cursor-Position entspricht */  
+
+#custom-cursor {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  cursor: none; /* Add this line to hide the cursor */
+}
+
+/* Media Query für mobile Geräte */
+@media (max-width: 768px) {
+  .circle{
+    animation: pingpongmobile 8s alternate infinite;
+  }
+  
+.text-box
+{
+  color: white;
+  padding: 10px;
+  max-height: fit-content;
+  height: min-content;
+  overflow: scroll;
+  font-size: 16px;
+  width: fit-content;
+}
+.text-boxes-wrapper {
+  margin-top: 0;
+  display: block;
+}
+
+.info {
+  display: none;
+}
+
+}
+
+/* In deiner CSS-Datei */
+body {
+  cursor: none; /* Standard-Cursor ausblenden */
+}
+
+.navigation a,
+.container.info,
+.text-box {
+  cursor: none; /* Benutzerdefinierten Cursor beibehalten */
+}
+
+/* Vergrößerte Größe für den Cursor */
+#custom-cursor.large {
+  width: 48px;
+  height: 48px;
+}
+
+.marqueeclosed {
+ background-color: yellow;
+  position: fixed;
+  width: 100vh;
+}

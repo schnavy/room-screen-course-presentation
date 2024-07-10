@@ -1,0 +1,462 @@
+/* include your fonts */
+@font-face {
+  font-family: 'Routed Gothic';
+  src: url('../assets/fonts/RoutedGothic.woff2') format('woff2'),
+      url('../assets/fonts/RoutedGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Routed Gothic';
+  src: url('../assets/fonts/RoutedGothic-Italic.woff2') format('woff2'),
+      url('../assets/fonts/RoutedGothic-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Routed Gothic Wide';
+    src: url('../assets/fonts/RoutedGothicWide-Italic.woff2') format('woff2'),
+        url('../assets/fonts/RoutedGothicWide-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Routed Gothic Wide';
+  src: url("'../assets/fonts/RoutedGothicWide.woff2'") format('woff2'),
+      url('../assets/fonts/RoutedGothicWide.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* keep this to get rid of the default styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: wait;
+}
+
+/* your own styling */
+
+/* Navigation bar styling */
+/* Style the navigation bar with a white dotted border, margins, padding, and rounded corners. Use flexbox for layout. */
+.navigation {
+  border:none dotted white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+/* Anchor link hover effects */
+/* Style the anchor links in the navigation bar with a custom font, no text decoration, red color, and a transition effect on hover. */
+.navigation a {
+  transition: all 200ms linear;
+  font-family: "Routed Gothic Wide";
+  font-style: italic;
+  text-decoration: none;
+  color: white;
+  font-size: 60px;
+}
+
+/* Change the color and rotate the link slightly when hovered over. */
+.navigation a:hover {
+  -webkit-text-stroke-width: 100px;
+  -webkit-text-stroke-color: white;
+  transform: rotate(25deg);
+}
+
+/* Style the paragraph elements in the navigation bar with a grey color and larger font size. */
+.navigation p {
+  font-family: "Routed Gothic Wide";
+  font-style: italic;
+  font-size: 60px;
+  color: rgb(132, 0, 132);
+}
+
+.navigation p:hover {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  transform: rotate(-50deg);
+}
+
+
+.form-image-wrapper {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    pointer-events: none;
+  }
+  
+  /* Form image styling */
+  /* Set a fixed width for the form image and apply a rotation animation. */
+  .form-image {
+    width: 400px;
+    animation: rotation 5s infinite ease-in-out;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+  }
+  
+  /* Floating ball styling */
+  /* Position a floating ball absolutely within the viewport, size it, give it a circular shape, and apply a jumping animation. */
+  .floating-ball {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+
+  .floating-ball-1 {
+    transform: translate(-50%, -50%);
+    animation: jumping-around 5s infinite linear;
+    background-color: white;
+  }
+
+  .floating-ball-2 {
+    transform: translate(-50%, -50%);
+    animation: jumping-around-another 5s infinite linear;
+    background-color: rgb(132, 0, 132);
+  }
+  .floating-ball-3 {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: 500px;
+    height: 500px;
+    border-radius: 0%;
+    transform: translate(-50%, -50%);
+    animation: jumping-around-another-2 10s infinite linear;
+    background-color: white;
+  }
+
+  /* Keyframe animations */
+/* Define a rotation animation for the form image. */
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Define a jumping animation for the floating ball, moving it around the viewport. */
+  @keyframes jumping-around {
+    0% {
+      top: 2vh;
+      left: 88vw;
+    }
+    25% {
+      top: 82vh;
+      left: 2vw;
+    }
+    50% {
+      top: 50vh;
+      left: 98vw;
+    }
+    75% {
+      top: 48vh;
+      left: 2vw;
+    }
+    100% {
+      top: 2vh;
+      left: 88vw;
+    }
+  }
+
+  @keyframes jumping-around-another {
+    0% {
+      top: 98vh;
+      left: 2vw;
+    }
+    25% {
+      top: 2vh;
+      left: 52vw;
+    }
+    50% {
+      top: 43vh;
+      left: 2vw;
+    }
+    75% {
+      top: 55vh;
+      left: 98vw;
+    }
+    100% {
+      top: 98vh;
+      left: 2vw;
+    }
+  }
+
+  @keyframes jumping-around-another-2 {
+    0% {
+      top: 95vh;
+      left: 5vw;
+    }
+    25% {
+      top: 95vh;
+      left: 95vw;
+    }
+    50% {
+      top: 5vh;
+      left: 95vw;
+    }
+    75% {
+      top: 5vh;
+      left: 5vw;
+    }
+    100% {
+      top: 95vh;
+      left: 5vw;
+    }
+  }
+
+body {
+background-color: black;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  font-kerning: normal ;
+  font-optical-sizing: auto ;
+  hanging-punctuation: first ;
+  cursor: wait;
+  height: 5000px;
+}
+body.time {
+  background-color: blanchedalmond;
+}
+
+.text-boxes-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+  .text-box {
+    font-family: "Routed-Gothic";
+    padding: 0px;
+    border-radius: 0px;
+    position: absolute; /* Fixes the position on the screen */
+    transform: translate(-50%, -50%); /* Offsets the box by its own width and height */
+    text-align: left; /* Center the text inside the box */
+    max-width: 80%; /* Optional: to ensure it doesn't overflow on small screens */
+  }
+
+  .text-box-1 {
+    font-family: 'Routed Gothic Wide';
+    font-size: 25px;
+    font-style: normal;
+    margin-top: 0px;
+    bottom: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+  }
+
+
+.text-box-2 {
+  font-family: 'Routed Gothic Wide';
+  font-size: 25px;
+  font-style: normal;
+  margin-top: 500px;
+  margin-left: 1150px;
+  
+
+}
+.text-box-3 {
+  font-family: 'Routed Gothic Wide';
+  font-size: 25px;
+  font-style: normal;
+ left: 740px;
+ margin-top: 800px;
+}
+.text-box-4 {
+  font-family: 'Routed Gothic Wide';
+  font-size: 25px;
+  font-style: normal;
+ left: 950px;
+ margin-top: -100px;
+}
+.text-box-5 {
+  font-family: 'Routed Gothic Wide';
+  font-size: 200px;
+  text-align: right;
+  line-height: 60%;
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
+  overflow-y: hidden;
+  position: absolute;
+  padding: 100px; /* Add padding for readability */
+  -webkit-text-stroke-width: 20px;
+  -webkit-text-stroke-color: white;
+
+}
+.text-box-6 {
+  margin-top: 200px;
+  margin-left: 800px ;
+  font-family: "Routed Gothic Wide";
+  font-style: normal;
+  font-size: 120px;
+  text-shadow: 1px 1px 1px rgb(132, 0, 132), 0 0 1em white, 0 0 0.2em white;
+}
+.text-box-7 {
+  margin-top: 400px;
+  margin-left: 1200px ;
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-size: 240px;
+  line-height: 60%;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: rgb(132, 0, 132);
+  color: rgb(132, 0, 132);
+}
+.text-box-8 {
+  margin-top: 500px;
+  margin-left: 600px ;
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-size: 240px;
+  line-height: 60%;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: rgb(132, 0, 132);
+  color: rgb(132, 0, 132);
+}
+.text-box-10 {
+  position: fixed;
+    top: 50px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  padding: 200px;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-size: 50px;
+  color: rgb(132, 0, 132);
+
+}
+
+.text-box-11 {
+  
+  font-family: 'Routed Gothic Wide';
+  font-size: 25px;
+  font-style: normal;
+  margin-top: 0px;
+  bottom: 40%;
+  left: 60%; /* Centers horizontally */
+}
+
+.text-box-12 {
+  margin-top: 0px;
+  bottom: 75%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  padding: 500px;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-size: 50px;
+  color: rgb(132, 0, 132);
+
+}
+
+.text-box-13 {
+  
+  font-family: 'Routed Gothic Wide';
+  font-size: 25px;
+  font-style: normal;
+  margin-top: 0px;
+  bottom: 85%;
+  left: 20%; /* Centers horizontally */
+}
+
+.text-box-14 {
+  margin-top: 0px;
+  padding: 100px;
+  bottom: 75%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  font-family: "Routed Gothic Wide";
+  font-style: normal;
+  font-size: 120px;
+  text-shadow: 1px 1px 1px black, 0 0 1em white, 0 0 0.2em black;
+}
+
+
+.highlight-1 {
+  font-family:'Routed Gothic Wide';
+  color: rgb(132, 0, 132);
+  font-style: italic;
+}
+
+.highlight-2 {
+  font-family: 'Routed Gothic';
+  color: red;
+  font-style: italic;
+}
+
+.highlight-3 {
+  font-family:'Routed Gothic Wide';
+  font-style: italic;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: none;
+}
+
+.highlight-4 {
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-size: 50px;
+  color: rgb(132, 0, 132);
+
+}
+
+
+.highlight-1:hover {
+  color: black;
+  -webkit-text-stroke-width: 25px;
+  -webkit-text-stroke-color: white;
+ 
+}
+
+.highlight-3:hover {
+  font-family: 'Routed Gothic Wide';
+  color: rgb(132, 0, 132);
+  font-size: 50px;
+  font-style: italic;
+  -webkit-text-stroke-width: 200px;
+  -webkit-text-stroke-color:rgb(132, 0, 132) ;
+
+
+}
+
+/* Responsive design for text boxes */
+/* Adjust the layout for smaller screens, stacking text boxes vertically and making them full width. */
+@media (max-width: 1000px) {
+  .text-boxes-wrapper {
+    flex-direction: column;
+  }
+
+  .text-box {
+    width: 100%;
+    height: auto;
+  }
+}
+
+

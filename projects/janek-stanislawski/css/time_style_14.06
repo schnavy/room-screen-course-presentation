@@ -1,0 +1,44 @@
+/* include your fonts */
+@font-face {
+  font-family: 'Routed Gothic';
+  src: url('../assets/fonts/RoutedGothic.woff2') format('woff2'),
+      url('../assets/fonts/RoutedGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Routed Gothic';
+  src: url('../assets/fonts/RoutedGothic-Italic.woff2') format('woff2'),
+      url('../assets/fonts/RoutedGothic-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Routed Gothic Wide';
+    src: url('../assets/fonts/RoutedGothicWide-Italic.woff2') format('woff2'),
+        url('../assets/fonts/RoutedGothicWide-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Routed Gothic Wide';
+  src: url("'../assets/fonts/RoutedGothicWide.woff2'") format('woff2'),
+      url('../assets/fonts/RoutedGothicWide.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* keep this to get rid of the default styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: wait;
+}
