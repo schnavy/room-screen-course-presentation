@@ -67,6 +67,13 @@ const jsonData = [
     path: "gregor-simon/index.html",
     img: "gregor.jpeg",
   },
+  {
+    name: "Lisa Schuhmann",
+    title: "MNC Records",
+    description: "Beim Betreten der Plattform, sollen Nutzer*innen, über eine einfache Navigation, einen umfassenden Überblick über die aktuellen Geschehnisse bei MNC Records erhalten. Sie werden über die neuesten Releases und bevorstehenden Events informiert, können sich über die Künstler*innen hinter den Projekten erkundigen und erhalten zudem einen Rückblick auf vergangene Ereignisse. <br/><br/> When users enter the platform, they should receive a comprehensive overview of the latest happenings at MNC Records. They will be informed about the newest releases and upcoming events, can learn about the artists behind the projects, and also get a retrospective on past events.",
+    path: "lisa-schuhmann/index.html",
+    img: "lisa.jpeg",
+  },
 ];
 
 // Course description data
