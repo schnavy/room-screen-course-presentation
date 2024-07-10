@@ -14,7 +14,7 @@ const jsonData = [
     description:
       'As part of the annual exhibition the Information Design class invites to the new format ROUND TABLE – Conversations. Different project partners will come together to present their work and discuss the role of communication design in a socio-political context with the students. To promote the event, „Bierdeckel" (beer mats) were printed and distributed around campus. The website works as the digital translation of this idea.',
     path: "marie-teigler/index.html",
-    img: "marie-teigler.jpeg",
+    img: "marie.jpeg",
   },
   {
     name: "Gue Hyun Lee",
@@ -77,6 +77,9 @@ const jsonData = [
     img: "lisa.jpeg",
   },
 ];
+
+jsonData.sort((a, b) => a.name.localeCompare(b.name));
+
 
 // Course description data
 const courseDescription =
