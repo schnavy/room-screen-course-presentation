@@ -30,6 +30,7 @@ html {
   overflow: hidden;
   perspective: 2000px;
   font-family: "G2 TGR";
+  font-
 }
 :root {
   --box-width: 100vw;
@@ -57,7 +58,7 @@ a {
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
-
+  border: 2px solid black;
   pointer-events: none;
 }
 
@@ -71,7 +72,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   pointer-events: all;
   outline: 2px solid black;
   outline-offset: -2px;

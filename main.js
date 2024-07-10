@@ -18,8 +18,9 @@ const jsonData = [
   },
   {
     name: "Gue Hyun Lee",
-    title: "IS IT A MOUSE IN A MOUTH OR A MOUTH IN A MOUSE?",
-    description: "",
+    title: "Is it a mouse in a mouth or a mouth in a mouse?",
+    description:
+      "This is an experimental website created using the JavaScript library faceapi.js allows users to control the mouse with their face. Instead of the conventional method of browsing with a mouse, users can actively use facial tracking to move the cursor. Clicking is done by opening and closing their mouth.",
     path: "gue-lee/index.html",
     img: "gue.jpeg",
   },
@@ -42,7 +43,8 @@ const jsonData = [
   {
     name: "Janek Stanisławski",
     title: "What are you waiting for?",
-    description: "",
+    description:
+      "Similarity of the two rooms—a room in the screen and the Giovanni's room—is rather accidental; and rather nobody can figure out, how they really look like",
     path: "janek-stanislawski/index.html",
     img: "janek.jpeg",
   },
@@ -57,7 +59,7 @@ const jsonData = [
   {
     name: "Eva Dietrich",
     title: "tischtennis.fun",
-    description: "Description for project 8",
+    description: "",
     path: "eva-dietrich/index.html",
     img: "eva.jpeg",
   },
@@ -79,14 +81,22 @@ const jsonData = [
   {
     name: "Margherita Villani",
     title: "Touchthegrass",
-    description: "Who needs outside world? Just stay in the internet to touch some grass.",
+    description:
+      "Who needs outside world? Just stay in the internet to touch some grass.",
     path: "margherita-villani/index.html",
     img: "margherita.jpeg",
+  },
+  {
+    name: "Hannah Krüger",
+    title: "Hannahs House",
+    description:
+      'During the course, I started coding a portfolio website, which is currently still a work-in-progress. The projects are sorted by category into rooms, which together form a house and fill the browser viewport of the "homepage". <br/><br/> Im Rahmen des Kurses habe ich angefangen, eine Portfoliowebsite zu coden, momentan noch ein work-in-progress. Die Projekte sind nach Kategorien in Räume sortiert, die zusammen ein Haus ergeben und das Browserfenster der „Homepage" füllen. ',
+    path: "hannah-krueger/index.html",
+    img: "hannah.jpeg",
   },
 ];
 
 jsonData.sort((a, b) => a.name.localeCompare(b.name));
-
 
 // Course description data
 const courseDescription =
