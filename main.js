@@ -58,7 +58,7 @@ const jsonData = [
   },
   {
     name: "Eva Dietrich",
-    title: "tischtennis.fun",
+    title: "tischtennisturnier.fun",
     description: "",
     path: "eva-dietrich/index.html",
     img: "eva.jpeg",
