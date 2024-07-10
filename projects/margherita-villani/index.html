@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch the grass</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/Images/Favicon2.svg">
+  </head>
+  <body>
+   
+   <!--text on the background(z index-1)-->
+   <div class="background-text">
+      <div class="full-justify" id="fulljustify"> 
+         <p>Do you feel the need to touch some grass? </p>
+         <p>Get off the internet now </p>
+         <p>Do not trust this website</p>
+      </div>
+    </div>
+
+
+
+    <p class="vertical-text">scroll down</p>
+    <p class="vertical-text2">scroll down</p>
+
+    <div class="arrow-l">
+      <img src="assets/Images/arrow.png" alt="arrow-l">
+    </div>
+
+    <div class="arrow-2">
+      <img src="assets/Images/arrow.png" alt="arrow-l">
+    </div>
+
+
+<div class="grass-container">
+
+  <div class="grass1">
+    <a href="sorry.html">
+    <h1 class="grass1-title">Park grass</h1>
+  <img src="assets/Images/erba1.svg" alt="grass3">
+  </a>
+  </div>
+
+  <div class="grass2">
+    <a href="sorry.html">
+      <h1 class="grass1-title">Freshly cut grass</h1>
+    <img src="assets/Images/erba2.svg" alt="grass2">
+    </div>
+
+    <div class="grass3">
+      <a href="sorry.html">
+        <h1 class="grass1-title">Wild meadow grass</h1>
+      <img src="assets/Images/erba3.svg" alt="grass2">
+      </div>
+
+      
+    <div class="grass4">
+      <a href="sorry.html">
+        <h1 class="grass1-title">Blowing in the wind</br> grass </h1>
+      <img src="assets/Images/erba4.svg" alt="grass2">
+      </div>
+
+      <div class="grass5">
+        <a href="sorry.html">
+          <h1 class="grass1-title">Moss in the Alps</h1>
+        <img src="assets/Images/erba5.svg" alt="grass2">
+        </div>
+
+        <div class="grass6">
+          <a href="sorry.html">
+            <h1 class="grass1-title">Grass on a hill</h1>
+          <img src="assets/Images/erba6.svg" alt="grass2">
+          </div>
+
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const grassContainer = document.querySelector('.grass-container');
+    const grassElements = Array.from(grassContainer.children);
+
+    // Function to duplicate elements to ensure a smooth infinite scroll
+    function duplicateElements() {
+      grassElements.forEach(el => {
+        const clone = el.cloneNode(true);
+        grassContainer.appendChild(clone);
+      });
+    }
+
+    // Initially duplicate elements enough times to ensure smooth scrolling
+    duplicateElements();
+    duplicateElements(); // Duplicate again to ensure there's enough content
+
+    // Function to check and reset scroll position for infinite scroll effect
+    function checkScroll() {
+      const containerHeight = grassContainer.scrollHeight / 3; // Adjust this if needed
+      if (grassContainer.scrollTop >= containerHeight) {
+        grassContainer.scrollTop -= containerHeight;
+      }
+    }
+
+    grassContainer.addEventListener('scroll', checkScroll);
+  });
+</script>
+
+  </body>
+</html>

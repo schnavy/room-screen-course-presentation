@@ -76,6 +76,13 @@ const jsonData = [
     path: "lisa-schuhmann/index.html",
     img: "lisa.jpeg",
   },
+  {
+    name: "Margherita Villani",
+    title: "Touchthegrass",
+    description: "Who needs outside world? Just stay in the internet to touch some grass.",
+    path: "margherita-villani/index.html",
+    img: "margherita.jpeg",
+  },
 ];
 
 jsonData.sort((a, b) => a.name.localeCompare(b.name));
