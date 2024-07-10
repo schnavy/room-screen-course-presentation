@@ -100,7 +100,7 @@ jsonData.sort((a, b) => a.name.localeCompare(b.name));
 
 // Course description data
 const courseDescription =
-  "A website can lie in bed on a mobile screen at night, serve as a display board at an crowded airport terminal, make executives sweat on the projector wall in the meeting room, or be part of installations or performative acts as an artistic medium. Screens and their contents always live in relation to the space/room in which they appear. <br/><br/> An introductory web coding course by David Wahrenburg, Summer Semester 2024<br/><br/>This collective Website was designed by Gue Hyun Lee";
+  "A website can lie in bed on a mobile screen at night, serve as a display board at an crowded airport terminal, make executives sweat on the projector wall in the meeting room, or be part of installations or performative acts as an artistic medium. Screens and their contents always live in relation to the space/room in which they appear. <br/><br/> An introductory web coding course by David Wahrenburg, Summer Semester 2024<br/><br/>This collective website was designed by Gue Hyun Lee";
 
 // Function to set wall images
 function setWallImages(image) {

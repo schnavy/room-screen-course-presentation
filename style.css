@@ -30,8 +30,8 @@ html {
   overflow: hidden;
   perspective: 2000px;
   font-family: "G2 TGR";
-  font-
 }
+
 :root {
   --box-width: 100vw;
   --box-height: 100vh;
@@ -67,12 +67,12 @@ a {
 }
 
 .back {
-  transform: translateZ(calc(-1 * var(--box-width)));
+  transform: translateZ(calc(-1.0005 * var(--box-width)));
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.8rem;
+  font-size: 3rem;
   pointer-events: all;
   outline: 2px solid black;
   outline-offset: -2px;
