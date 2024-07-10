@@ -20,7 +20,7 @@ const jsonData = [
     name: "Gue Hyun Lee",
     title: "IS IT A MOUSE IN A MOUTH OR A MOUTH IN A MOUSE?",
     description: "",
-    path: "https://guehlee.github.io/Deep/",
+    path: "gue-lee/index.html",
     img: "gue.jpeg",
   },
   {
