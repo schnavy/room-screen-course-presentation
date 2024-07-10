@@ -67,7 +67,7 @@ a {
 }
 
 .back {
-  transform: translateZ(calc(-1.0005 * var(--box-width)));
+  transform: translateZ(calc(-0.97 * var(--box-width)));
   background-color: white;
   display: flex;
   align-items: center;
@@ -219,7 +219,7 @@ a {
 
 .content-detail .title-name {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 2.4rem;
   transform: translateY(-50%);
 }
 
