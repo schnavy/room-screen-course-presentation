@@ -1,8 +1,8 @@
 /* include your fonts */
 @font-face {
     font-family: "Clouds";
-    src: url("/Users/eli/Downloads/HTML-CSS_Boilerplate-main/assets/fonts/DIN Condensed Bold.ttf") format("woff2"),
-      url("/Users/eli/Downloads/HTML-CSS_Boilerplate-main/assets/fonts/DIN Condensed Bold.ttf") format("woff");
+    src: url("Assets/fonts/DIN Condensed Bold.ttf") format("woff2"),
+      url("Assets/fonts/DIN Condensed Bold.ttf") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
