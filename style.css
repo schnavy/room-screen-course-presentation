@@ -41,13 +41,16 @@ a {
   color: black;
   text-decoration: none;
 }
+
 .room {
   position: relative;
   width: var(--box-width);
   height: var(--box-height);
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   margin: auto;
   top: 50%;
+  -webkit-transform: translateY(-50%) rotateX(0deg) rotateY(0deg);
   transform: translateY(-50%) rotateX(0deg) rotateY(0deg);
 }
 
@@ -67,51 +70,67 @@ a {
 }
 
 .back {
+  -webkit-transform: translateZ(calc(-0.97 * var(--box-width)));
   transform: translateZ(calc(-0.97 * var(--box-width)));
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 3vw;
   pointer-events: all;
   outline: 2px solid black;
   outline-offset: -2px;
 }
 
 .left {
+  -webkit-transform: rotateY(-90deg) translateX(calc(-1 * var(--box-width)));
   transform: rotateY(-90deg) translateX(calc(-1 * var(--box-width)));
+  -webkit-transform-origin: left center;
   transform-origin: left center;
 }
+
 .left.gradient {
+  background: -webkit-linear-gradient(90deg, white, black);
   background: linear-gradient(90deg, white, black);
 }
 
 .right {
+  -webkit-transform: rotateY(90deg) translateX(calc(var(--box-width)));
   transform: rotateY(90deg) translateX(calc(var(--box-width)));
+  -webkit-transform-origin: right center;
   transform-origin: right center;
 }
+
 .right.gradient {
+  background: -webkit-linear-gradient(90deg, black, white);
   background: linear-gradient(90deg, black, white);
 }
 
 .top {
   height: var(--box-width);
+  -webkit-transform: rotateX(-270deg) translateY(calc(-1 * var(--box-width)));
   transform: rotateX(-270deg) translateY(calc(-1 * var(--box-width)));
+  -webkit-transform-origin: top center;
   transform-origin: top center;
 }
 
 .top.gradient {
+  background: -webkit-linear-gradient(0deg, black, white);
   background: linear-gradient(0deg, black, white);
 }
+
 .bottom {
   height: var(--box-width);
   width: var(--box-width);
   bottom: 0;
+  -webkit-transform: rotateX(270deg) translateY(calc(1 * var(--box-width)));
   transform: rotateX(270deg) translateY(calc(1 * var(--box-width)));
+  -webkit-transform-origin: bottom center;
   transform-origin: bottom center;
 }
 
 .bottom.gradient {
+  background: -webkit-linear-gradient(0deg, white, black);
   background: linear-gradient(0deg, white, black);
 }
 
@@ -122,9 +141,9 @@ a {
 
 .header {
   display: flex;
-
   width: 100%;
 }
+
 .header > div {
   padding: 70px;
   cursor: pointer;
@@ -135,6 +154,7 @@ a {
   outline-offset: -1px;
   flex-grow: 1;
 }
+
 .back-button {
   display: none;
   align-items: center;
@@ -161,6 +181,7 @@ a {
   display: flex;
   align-items: center;
   writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   text-orientation: mixed;
   outline: 2px solid black;
@@ -198,6 +219,7 @@ a {
   background-color: black;
   color: white;
 }
+
 .content-detail .details {
   flex-grow: 1;
   padding: 70px;
@@ -219,7 +241,8 @@ a {
 
 .content-detail .title-name {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2.4vw;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
