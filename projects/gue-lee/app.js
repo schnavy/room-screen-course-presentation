@@ -3,6 +3,9 @@ const videoContainer = document.getElementById("video-container");
 const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
+const button4 = document.querySelector(".button4");
+const button5 = document.querySelector(".button5");
+const button6 = document.querySelector(".button6");
 
 const MODEL_URI = "models";
 let mouthOpen = false;
@@ -117,6 +120,9 @@ function moveCursor(x, y) {
       targetElement.classList.contains("button1") ||
       targetElement.classList.contains("button2") ||
       targetElement.classList.contains("button3") ||
+      targetElement.classList.contains("button4") ||
+      targetElement.classList.contains("button5") ||
+      targetElement.classList.contains("button6") ||
       targetElement.tagName.toLowerCase() === "a"
     ) {
       targetElement.classList.add("active");
@@ -133,7 +139,7 @@ function moveCursor(x, y) {
     }
 
     // Remove active class from buttons or links that are not under the cursor
-    [button1, button2, button3].forEach((button) => {
+    [button1, button2, button3, button4, button5, button6].forEach((button) => {
       if (button !== targetElement) {
         button.classList.remove("active");
       }
